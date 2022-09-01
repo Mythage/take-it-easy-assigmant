@@ -16,12 +16,12 @@ const brands = document.getElementById('list')
 // Het is handig om onze scripts als functies op te zetten, zodat we ze gemakkelijk kunnen hergebruiken.
 // Tip: vergeet deze functie -declaratie niet aan te roepen!
 
-function getTvBrand() {
-   return inventory.map((tv) => {
-        return brands.innerHTML += `
-   <li>${tv.brand}</li>
-`
+function getTvBrand(arr) {
+    arr.map((tv) => {
+        brands.innerHTML += `
+        <li>${tv.brand}</li>
+        `
     })
 }
 
-getTvBrand()
+getTvBrand(inventory)
