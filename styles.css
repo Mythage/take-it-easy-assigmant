@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+}
+
+.container span {
+    font-weight: 600;
+}
+.sold-items {
+    color: #15de15;
+}
+
+.bought-items{
+    color: blue;
+}
+
+.inventory{
+    color: red;
+}
+
+.info * {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.info {
+    margin: 20px;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #b7b7b7;
+    border-radius: 5px;
+}
+.info p{
+    margin-bottom: 20px;
+}
