@@ -1,0 +1,16 @@
+body{
+    font-family: 'Arial', sans-serif;
+    font-weight: 600;
+}
+
+.sold-items {
+    color: #15de15;
+}
+
+.bought-items{
+    color: blue;
+}
+
+.inventory{
+    color: red;
+}
