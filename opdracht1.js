@@ -2,24 +2,29 @@
 
 // Opdracht 1a: Gebruik een array-methode om een array te maken met alle tv-type namen. Log de uitkomst in de console.
 
-const titleTvType = document.getElementById('tvType')
-titleTvType.innerText = `Tv types for sell`
+const type = inventory.map((tv) => {
+    return tv.type
+})
+console.log(type)
 
-function sortOnType(tvType) {
-    const list = document.getElementById('listTvType')
-    return tvType.map((entry) => {
-        list.innerHTML = list.innerHTML + `
-            <li class="list-item">${entry.type}</li>
-        `
-    })
-}
-sortOnType(inventory)
+// const titleTvType = document.getElementById('tvType')
+// titleTvType.innerText = `Tv types for sell`
+//
+// function sortOnType(tvType) {
+//     const list = document.getElementById('listTvType')
+//     return tvType.map((entry) => {
+//         list.innerHTML = list.innerHTML + `
+//             <li class="list-item">${entry.type}</li>
+//         `
+//     })
+// }
+// sortOnType(inventory)
 
 // Opdracht 1b: Gebruik een array-methode om alle tv's te verzamelen (de hele objecten) die volledig uitverkocht zijn. Log de uitkomst in de console.
 
 const soldOut = inventory.filter((tv) => {
         if (tv.originalStock - tv.sold === 0)
-            return [];
+            return tv;
     }
 )
 console.log(soldOut);
@@ -28,13 +33,15 @@ console.log(soldOut);
 
 const ambiLighttv = inventory.filter((tv)=>{
     if (tv.options.ambiLight)
-        return [];
+        return tv;
 }
 )
 console.log(ambiLighttv)
 
 // Opdracht 1d: Schrijf een functie die alle tv's van laagste naar hoogste prijs sorteert. Log de uitkomst in de console.
-
-const sortedTV = inventory.sort((a, b) => a.price - b.price);
+const coppyInventory = inventory.map((tv) =>{
+    return tv
+})
+const sortedTV = coppyInventory.sort((a, b) => a.price - b.price);
 
 console.log(sortedTV)
